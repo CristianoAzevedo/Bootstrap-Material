@@ -1,0 +1,33 @@
+<div class="row" ng-init="atualizarCores()">
+    <div class="row">
+        <div class="form-group col-sm-6">
+            <a href="#/cores/manter-cor" class="btn btn-danger btn-fab btn-raised mdi-content-add"></a>
+        </div>
+    </div>
+    <div class="row" ng-show="cores.length > 0">
+        <div class="col-md-6">
+            <input type="search" ng-model="search" placeholder="Pesquisar..." class="form-control">
+        </div> 
+    </div>
+    <div class="row" ng-show="cores.length > 0">
+        <div class="col-md-6">
+            <table class="table">
+                <thead>
+                    <th>ID</th>
+                    <th>Cor</th>
+                    <th class="text-center">Ações</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="c in cores | filter:search">
+                        <td>{{c.id}}</td>
+                        <td><span style="background:{{c.nome}}; padding: 5px 20px; border-radius: 8px;"></span></td>
+                        <td class="text-center">
+                            <a href="#/cores/manter-cor/{{c.id}}" class="btn btn-warning btn-xs">Editar</a>
+                            <button class="btn btn-danger btn-xs" ng-click="excluir(c)">Excluir</button>                                    
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

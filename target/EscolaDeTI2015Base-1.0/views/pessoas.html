@@ -1,0 +1,37 @@
+<div class="row" ng-init="atualizarPessoa()">
+    <div class="row">
+        <div class="form-group col-sm-6">            
+           <a href="#/pessoas/manter-pessoa" class="btn btn-danger btn-fab btn-raised mdi-content-add"></a>
+        </div>
+    </div>
+    <div class="row" ng-show="pessoas.length > 0">
+        <div class="col-md-6">
+            <input type="search" ng-model="search" placeholder="Pesquisar..." class="form-control">
+        </div> 
+    </div>
+    <div class="row" ng-show="pessoas.length > 0">
+        <div class="col-md-6">
+            <table class="table">
+                <thead>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Sobrenome</th>
+                    <th>Idade</th>
+                    <th class="text-center">Ações</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="p in pessoas | filter:search">
+                        <td>{{p.id}}</td>
+                        <td>{{p.nome}}</td>
+                        <td>{{p.sobreNome}}</td>
+                        <td>{{p.idade}}</td>
+                        <td class="text-center">
+                            <a href="#/pessoas/manter-pessoa/{{p.id}}" class="btn btn-warning btn-xs">Editar</a>
+                            <button class="btn btn-danger btn-xs" ng-click="excluir(p)">Excluir</button>                                    
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

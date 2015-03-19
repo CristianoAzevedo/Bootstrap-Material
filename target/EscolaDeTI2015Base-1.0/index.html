@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="App">
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- angular -->
+        <script type="text/javascript" src="js/angular.min.js"></script>
+        <script type="text/javascript" src="js/angular-route.js"></script>
+        <script type="text/javascript" src="js/loading-bar.min.js"></script>
+        <!-- application -->
+        <script type="text/javascript" src="js/Controllers/CorController.js"></script>
+        <script type="text/javascript" src="js/Controllers/PaisController.js"></script>
+        <script type="text/javascript" src="js/Controllers/PessoaController.js"></script>
+        <script type="text/javascript" src="js/rotas.js"></script>
+        <!-- bootstrap -->
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+         <link rel="stylesheet" href="css/bootstrap.min.css">
+         
+        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>       
+       
+        <!-- material -->
+        <link rel="stylesheet" href="css/roboto.min.css">
+        <link rel="stylesheet" href="css/material-fullpalette.min.css">
+        <link rel="stylesheet" href="css/ripples.min.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+                <div class="page-header">
+                    <h1>Sistema cibernético<small>  <em>@todos direitos reservados</em></small></h1>
+                 </div>
+                <!-- begin menu -->
+                <div class="col-md-3">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#/cores">Cores</a></li>
+                        <li><a href="#/paises">Paises</a></li>
+                        <li><a href="#/pessoas">Pessoas</a></li>
+                    </ul>
+                </div>
+                <!-- end menu -->
+                <!-- begin content -->
+                <div class="col-md-9">
+                    <div ng-view class="container"></div>
+                </div>
+                <!-- end content -->            
+        </div>
+    </body>
+</html>

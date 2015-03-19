@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="form-group col-sm-6">
+        Código: <input type="text" class="form-control" ng-model="pessoa.id"  ng-disabled="update">
+        Nome: <input type="text" class="form-control" ng-model="pessoa.nome">
+        Sobrenome: <input type="text" class="form-control" ng-model="pessoa.sobreNome">
+        Idade: <input type="text" class="form-control" ng-model="pessoa.idade">
+    </div>
+</div>
+<div class="row">
+    <div class="form-group col-sm-6">
+        <button class="btn btn-success" ng-click="cadastrar(pessoa)">Cadastrar</button>
+    </div>
+</div>

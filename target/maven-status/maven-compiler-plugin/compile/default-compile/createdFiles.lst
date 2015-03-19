@@ -1,0 +1,16 @@
+br\unicesumar\escoladeti2015base\pais\Pais.class
+br\unicesumar\escoladeti2015base\pessoa\PessoaController.class
+br\unicesumar\escoladeti2015base\pessoa\Pessoa.class
+br\unicesumar\escoladeti2015base\cores\CorService.class
+br\unicesumar\escoladeti2015base\cores\CorRepository.class
+br\unicesumar\escoladeti2015base\cores\CorController.class
+br\unicesumar\escoladeti2015base\pessoa\PessoaService.class
+br\unicesumar\escoladeti2015base\pessoa\PessoaRepositoryInMemory.class
+br\unicesumar\escoladeti2015base\Application.class
+br\unicesumar\escoladeti2015base\cores\Cor.class
+br\unicesumar\escoladeti2015base\cores\CorRepositoryInMemory.class
+br\unicesumar\escoladeti2015base\pais\PaisService.class
+br\unicesumar\escoladeti2015base\pais\PaisRepository.class
+br\unicesumar\escoladeti2015base\pessoa\PessoaRepository.class
+br\unicesumar\escoladeti2015base\pais\PaisController.class
+br\unicesumar\escoladeti2015base\pais\PaisRepositoryInMemory.class

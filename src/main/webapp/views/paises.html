@@ -1,0 +1,35 @@
+<div class="row"  ng-init="atualizar()">
+    <div class="row">
+        <div class="form-group col-sm-6">            
+             <a href="#/paises/manter-pais" class="btn btn-danger btn-fab btn-raised mdi-content-add"></a>
+        </div>
+    </div>
+    <div class="row" ng-show="paises.length > 0">
+        <div class="col-md-6">
+            <input type="search" ng-model="search" placeholder="Pesquisar..." class="form-control">
+        </div> 
+    </div>
+    <div class="row" ng-show="paises.length > 0">
+        <div class="col-md-6">
+            <table class="table">
+                <thead>
+                    <th>ID</th>
+                    <th>País</th>
+                    <th>Sigla</th>
+                    <th class="text-center">Ações</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="p in paises | filter:search">
+                        <td>{{p.id}}</td>
+                        <td>{{p.nome}}</td>
+                        <td>{{p.sigla}}</td>
+                        <td class="text-center">
+                            <a href="#/paises/manter-pais/{{p.id}}" class="btn btn-warning btn-xs">Editar</a>
+                            <button class="btn btn-danger btn-xs" ng-click="excluir(p)">Excluir</button>                                    
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
